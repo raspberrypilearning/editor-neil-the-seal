@@ -2,6 +2,8 @@
 
 Now give Neil something to smash. You'll use clones to scatter stop signs around the town.
 
+![sign sprite](images/sign-sprite.png)
+
 ## Step 1
 
 Click on the `Sign`{:class="block3looks"} sprite. Add a `when green flag clicked`{:class="block3events"} block and a `show`{:class="block3looks"} block, then use a `repeat ()`{:class="block3control"} loop to move to six random spots, making a clone at each one.

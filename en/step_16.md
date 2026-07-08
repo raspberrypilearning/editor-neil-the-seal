@@ -2,6 +2,8 @@
 
 Now use Neil's position to move the Ranger towards him.
 
+![ranger sprite](images/ranger-sprite.png)
+
 Click on the `Ranger`{:class="block3looks"} sprite.
 
 ## Step 1

@@ -2,6 +2,8 @@
 
 When the game ends, all the stop sign clones are still lying around town. Get them to tidy themselves up.
 
+![sign sprite](images/sign-sprite.png)
+
 Click on the `Sign`{:class="block3looks"} sprite. In the clone's `forever`{:class="block3control"} loop, add an `if then`{:class="block3control"} block that checks whether `game over`{:class="block3variables"} is `1`. If it is, `delete this clone`{:class="block3control"}.
 
 ```blocks3

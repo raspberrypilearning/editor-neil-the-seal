@@ -2,6 +2,8 @@
 
 Now add a Ranger to chase Neil around the town.
 
+![ranger sprite](images/ranger-sprite.png)
+
 ## Step 1
 
 Click on the `Ranger`{:class="block3looks"} sprite. Add a `when green flag clicked`{:class="block3events"} block, a `go to x: () y: ()`{:class="block3motion"} block to place the Ranger in the corner, and a `show`{:class="block3looks"} block.

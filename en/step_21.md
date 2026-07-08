@@ -2,6 +2,8 @@
 
 Now end the game when Neil runs out of lives.
 
+![stage](images/stage-sprite.png)
+
 Click on the `Stage`.
 
 ## Step 1

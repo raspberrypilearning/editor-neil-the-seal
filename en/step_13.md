@@ -2,6 +2,8 @@
 
 When the game is over, Neil should stop moving.
 
+![neil sprite](images/neil-sprite.png)
+
 Click on the `Neil`{:class="block3looks"} sprite and wrap all of his movement code in an `if then`{:class="block3control"} block that only runs while `game over`{:class="block3variables"} is `0`.
 
 ```blocks3

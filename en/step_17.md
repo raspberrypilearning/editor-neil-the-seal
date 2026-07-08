@@ -2,6 +2,8 @@
 
 Neil needs some lives to lose when the Ranger catches him.
 
+![stage](images/stage-sprite.png)
+
 Click on the `Stage`. Make a new variable called `lives`{:class="block3variables"}, **For all sprites**, and tick its checkbox so the player can see it. Add it to your setup script and set `lives`{:class="block3variables"} to `3` at the start.
 
 ```blocks3

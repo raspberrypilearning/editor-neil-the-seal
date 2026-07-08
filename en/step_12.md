@@ -2,6 +2,8 @@
 
 Now check whether the town is clear, and show the `Win` backdrop when it is.
 
+![stage](images/stage-sprite.png)
+
 ## Step 1
 
 Make a new variable called `game over`{:class="block3variables"}, **For all sprites**, and untick its checkbox to hide it. On the Stage, add it to your setup script and set it to `0` at the start. Add a `switch backdrop to ()`{:class="block3looks"} block so the game always begins on the `Town` backdrop.

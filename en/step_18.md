@@ -2,6 +2,8 @@
 
 Now make Neil lose a life when the Ranger catches him.
 
+![ranger sprite](images/ranger-sprite.png)
+
 Click on the `Ranger`{:class="block3looks"} sprite.
 
 ## Step 1

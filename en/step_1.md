@@ -17,7 +17,9 @@ show
 
 ## Step 2
 
-Add another `when green flag clicked`{:class="block3events"} block with a `forever`{:class="block3control"} loop. Inside it, use an `if then`{:class="block3control"} block to move Neil up when the `up arrow`{:class="block3sensing"} key is pressed.
+Add another `when green flag clicked`{:class="block3events"} block with a `forever`{:class="block3control"} loop.
+
+Inside it, use an `if then`{:class="block3control"} block to move Neil up when the `up arrow`{:class="block3sensing"} key is pressed.
 
 ```blocks3
 when green flag clicked

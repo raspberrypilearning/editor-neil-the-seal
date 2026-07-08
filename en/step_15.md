@@ -2,6 +2,8 @@
 
 For the Ranger to chase Neil, it needs to know where Neil is.
 
+![neil sprite](images/neil-sprite.png)
+
 ## Step 1
 
 Click on the `Neil`{:class="block3looks"} sprite and make two variables, `neil x`{:class="block3variables"} and `neil y`{:class="block3variables"}, both **For all sprites**. Untick both checkboxes to hide them from the player.

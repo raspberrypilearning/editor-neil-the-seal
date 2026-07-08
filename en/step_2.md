@@ -1,5 +1,7 @@
 ## Move Neil in every direction
 
+![neil sprite](images/neil-sprite.png)
+
 ## Step 1
 
 Add another `if then`{:class="block3control"} block inside the `forever`{:class="block3control"} loop. This time check for the `down arrow`{:class="block3sensing"} key and use `change y by ()`{:class="block3motion"} to move Neil down.

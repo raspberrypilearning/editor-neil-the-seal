@@ -2,6 +2,8 @@
 
 Now Neil needs to react when he's caught.
 
+![neil sprite](images/neil-sprite.png)
+
 Click on the `Neil`{:class="block3looks"} sprite. Add a `when I receive ()`{:class="block3events"} block for the `got ya` message. Send Neil back to his starting position, then make him `say () for () seconds`{:class="block3looks"} to say "Hey!".
 
 ```blocks3

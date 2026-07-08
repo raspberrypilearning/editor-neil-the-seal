@@ -2,6 +2,8 @@
 
 Click on the `Sign`{:class="block3looks"} sprite.
 
+![sign sprite](images/sign-sprite.png)
+
 ## Step 1
 
 Inside the `repeat ()`{:class="block3control"} loop, add a `change stuff to smash by ()`{:class="block3variables"} block to count each clone. Then add a `wait () seconds`{:class="block3control"} block for `0.1` seconds at the very top of the script.

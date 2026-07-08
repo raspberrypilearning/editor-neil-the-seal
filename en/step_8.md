@@ -2,6 +2,8 @@
 
 Right now the signs vanish the moment Neil touches them. To make Neil *smash* them, the player should have to press the space bar too.
 
+![sign sprite](images/sign-sprite.png)
+
 Change the `if then`{:class="block3control"} condition so it also checks whether the `space`{:class="block3sensing"} key is pressed, using an `and`{:class="block3operators"} block to join the two checks.
 
 ```blocks3

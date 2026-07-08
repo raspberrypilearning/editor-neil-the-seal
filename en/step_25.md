@@ -2,6 +2,9 @@
 
 Now make the cars and barriers your own. You'll make these changes on both the `Car`{:class="block3looks"} and `Barrier`{:class="block3looks"} sprites.
 
+![car sprite](images/car-sprite.png)
+![barrier sprite](images/barrier-sprite.png)
+
 ## Step 1
 
 In the `repeat ()`{:class="block3control"} loop, change the number to decide how many cars appear. Then do the same on the `Barrier`{:class="block3looks"} sprite.

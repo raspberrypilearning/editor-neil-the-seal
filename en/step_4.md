@@ -2,6 +2,8 @@
 
 Right now Neil slides around without moving. Give him a second costume so he looks like he's walking.
 
+![neil sprite](images/neil-sprite.png)
+
 ## Step 1
 
 Click the `Costumes`{:class="block3looks"} tab. Neil has one costume, called `seal1`.
