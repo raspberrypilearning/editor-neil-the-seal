@@ -1,11 +1,23 @@
-## Make it your own
+## Tidy up the signs
 
-You've finished the game — now make it your own! Here are some ideas to take Neil the Seal further. You don't have to try them all; pick the ones that sound the most fun.
+When the game ends, all the stop sign clones are still lying around town. Get them to tidy themselves up.
 
-- Can you add more levels, each with different things for Neil to smash?
-- Can you turn the Ranger into clones, so more than one Ranger chases Neil at once?
-- Can you give each level its own backdrop, so the town changes as Neil plays?
-- Can you change how fast Neil or the Rangers move, to make the game easier or harder?
-- Can you add a patch of sea where Neil can hide, so the Ranger can't reach him?
+Click on the `Sign`{:class="block3looks"} sprite. In the clone's `forever`{:class="block3control"} loop, add an `if then`{:class="block3control"} block that checks whether `game over`{:class="block3variables"} is `1`. If it is, `delete this clone`{:class="block3control"}.
 
-Remember to save your project.
+```blocks3
+when I start as a clone
+forever
+if <<touching (Neil v)?> and <key (space v) pressed?>> then
+change [score v] by (10)
+change [stuff to smash v] by (-1)
+delete this clone
+end
++if <(game over) = (1)> then
+delete this clone
+end
+end
+```
+
+## Now run your code
+
+Click the green flag and let the Ranger catch Neil three times. The `game over` backdrop appears, the Ranger sends Neil back to sea, and the leftover signs disappear.

@@ -1,35 +1,34 @@
-## Stop Neil when the game ends
+## Detect a win
 
-When the game is over, Neil should stop moving.
+Now check whether the town is clear, and show the `Win` backdrop when it is.
 
-Click on the `Neil`{:class="block3looks"} sprite and wrap all of his movement code in an `if then`{:class="block3control"} block that only runs while `game over`{:class="block3variables"} is `0`.
+## Step 1
+
+Make a new variable called `game over`{:class="block3variables"}, **For all sprites**, and untick its checkbox to hide it. On the Stage, add it to your setup script and set it to `0` at the start. Add a `switch backdrop to ()`{:class="block3looks"} block so the game always begins on the `Town` backdrop.
 
 ```blocks3
 when green flag clicked
++switch backdrop to (Town v)
+set [score v] to (0)
+set [stuff to smash v] to (0)
++set [game over v] to (0)
+```
+
+## Step 2
+
+On the Stage, add a new script to check for a win. Start with a `wait () seconds`{:class="block3control"} block for `0.2` seconds so everything can be counted first. Then use a `forever`{:class="block3control"} loop with an `if then`{:class="block3control"} block: when `stuff to smash`{:class="block3variables"} is less than `1` and `game over`{:class="block3variables"} is `0`, switch to your `Win` backdrop and set `game over`{:class="block3variables"} to `1`.
+
+```blocks3
+when green flag clicked
+wait (0.2) seconds
 forever
-+if <(game over) = (0)> then
-if <key (up arrow v) pressed?> then
-change y by (5)
-next costume
-end
-if <key (down arrow v) pressed?> then
-change y by (-5)
-next costume
-end
-if <key (left arrow v) pressed?> then
-change x by (-5)
-point in direction (-90)
-next costume
-end
-if <key (right arrow v) pressed?> then
-change x by (5)
-point in direction (90)
-next costume
-end
+if <<(stuff to smash) < (1)> and <(game over) = (0)>> then
+switch backdrop to (Win v)
+set [game over v] to (1)
 end
 end
 ```
 
 ## Now run your code
 
-Click the green flag and smash everything. When the last object is gone, your `Win` backdrop appears and Neil stops moving.
+Click the green flag and smash everything in town. When the last object is gone, your `Win` backdrop appears.

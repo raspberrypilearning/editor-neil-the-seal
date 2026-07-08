@@ -1,25 +1,35 @@
-## Add the Ranger
+## Stop Neil when the game ends
 
-Now add a Ranger to chase Neil around the town.
+When the game is over, Neil should stop moving.
 
-## Step 1
-
-Click on the `Ranger`{:class="block3looks"} sprite. Add a `when green flag clicked`{:class="block3events"} block, a `go to x: () y: ()`{:class="block3motion"} block to place the Ranger in the corner, and a `show`{:class="block3looks"} block.
-
-```blocks3
-when green flag clicked
-go to x: (-200) y: (140)
-show
-```
-
-## Step 2
-
-The Ranger should only chase while the game is being played. Add a `forever`{:class="block3control"} loop with an `if then`{:class="block3control"} block that checks `game over`{:class="block3variables"} is `0`. You'll fill it in next.
+Click on the `Neil`{:class="block3looks"} sprite and wrap all of his movement code in an `if then`{:class="block3control"} block that only runs while `game over`{:class="block3variables"} is `0`.
 
 ```blocks3
 when green flag clicked
 forever
-if <(game over) = (0)> then
++if <(game over) = (0)> then
+if <key (up arrow v) pressed?> then
+change y by (5)
+next costume
+end
+if <key (down arrow v) pressed?> then
+change y by (-5)
+next costume
+end
+if <key (left arrow v) pressed?> then
+change x by (-5)
+point in direction (-90)
+next costume
+end
+if <key (right arrow v) pressed?> then
+change x by (5)
+point in direction (90)
+next costume
+end
 end
 end
 ```
+
+## Now run your code
+
+Click the green flag and smash everything. When the last object is gone, your `Win` backdrop appears and Neil stops moving.

@@ -1,21 +1,25 @@
-## Track where Neil is
+## Add the Ranger
 
-For the Ranger to chase Neil, it needs to know where Neil is.
+Now add a Ranger to chase Neil around the town.
 
 ## Step 1
 
-Click on the `Neil`{:class="block3looks"} sprite and make two variables, `neil x`{:class="block3variables"} and `neil y`{:class="block3variables"}, both **For all sprites**. Untick both checkboxes to hide them from the player.
+Click on the `Ranger`{:class="block3looks"} sprite. Add a `when green flag clicked`{:class="block3events"} block, a `go to x: () y: ()`{:class="block3motion"} block to place the Ranger in the corner, and a `show`{:class="block3looks"} block.
+
+```blocks3
+when green flag clicked
+go to x: (-200) y: (140)
+show
+```
 
 ## Step 2
 
-Find Neil's movement script. At the bottom of the movement code, inside the `if then`{:class="block3control"} block, set `neil x`{:class="block3variables"} and `neil y`{:class="block3variables"} to his current position.
+The Ranger should only chase while the game is being played. Add a `forever`{:class="block3control"} loop with an `if then`{:class="block3control"} block that checks `game over`{:class="block3variables"} is `0`. You'll fill it in next.
 
 ```blocks3
-if <key (right arrow v) pressed?> then
-change x by (5)
-point in direction (90)
-next costume
+when green flag clicked
+forever
+if <(game over) = (0)> then
 end
-+set [neil x v] to (x position)
-+set [neil y v] to (y position)
+end
 ```

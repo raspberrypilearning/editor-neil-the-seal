@@ -1,7 +1,33 @@
-## Make a game over screen
+## Catch Neil
 
-The game should end when Neil runs out of lives. First, make a backdrop for it.
+Now make Neil lose a life when the Ranger catches him.
 
-Click on the `Stage`, then the `Backdrops`{:class="block3looks"} tab. Hover over **Choose a Backdrop** and click **Paint** to make a new, blank backdrop. Call it `game over`, and design it however you like.
+Click on the `Ranger`{:class="block3looks"} sprite.
 
-![The game over backdrop from the example project, a blue screen reading BACK TO SEA!](images/game-over-backdrop.png)
+## Step 1
+
+At the bottom of the `if then`{:class="block3control"} block, below the movement code, add an `if then`{:class="block3control"} block that checks if the Ranger is `touching Neil`{:class="block3sensing"}. If so, `change lives by ()`{:class="block3variables"} by `-1` and send the Ranger back to the start.
+
+```blocks3
+if <(neil y) > (y position)> then
+change y by (2)
+else
+change y by (-2)
+end
++if <touching (Neil v)?> then
+change [lives v] by (-1)
+go to x: (-200) y: (140)
+end
+```
+
+## Step 2
+
+Make a new message called `got ya`, and add a `broadcast () and wait`{:class="block3events"} block inside that `if then`{:class="block3control"} block to tell the rest of the game Neil has been caught.
+
+```blocks3
+if <touching (Neil v)?> then
+change [lives v] by (-1)
+go to x: (-200) y: (140)
++broadcast (got ya v) and wait
+end
+```

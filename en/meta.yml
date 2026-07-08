@@ -14,7 +14,8 @@ steps:
   - title: Fill the town with signs
   - title: Make the signs disappear
   - title: Smash with the space bar
-  - title: Keep score
+  - title: Set up the score
+  - title: Count and score the signs
   - title: Make a Win screen
   - title: Detect a win
   - title: Stop Neil when the game ends
@@ -23,10 +24,14 @@ steps:
   - title: Make the Ranger chase Neil
   - title: Give Neil lives
   - title: Catch Neil
+  - title: Neil reacts to being caught
   - title: Make a game over screen
   - title: End the game
-  - title: React to the end of the game
-  - title: Add cars and barriers
+  - title: The Ranger says goodbye
+  - title: Tidy up the signs
+  - title: Copy the code to cars and barriers
+  - title: Customise your cars and barriers
+  - title: Make the word list
   - title: Give Neil a voice
     completion:
       - internal

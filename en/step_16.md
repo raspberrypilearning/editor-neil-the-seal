@@ -1,14 +1,42 @@
-## Give Neil lives
+## Make the Ranger chase Neil
 
-Neil needs some lives to lose when the Ranger catches him.
+Now use Neil's position to move the Ranger towards him.
 
-Click on the `Stage`. Make a new variable called `lives`{:class="block3variables"}, **For all sprites**, and tick its checkbox so the player can see it. Add it to your setup script and set `lives`{:class="block3variables"} to `3` at the start.
+Click on the `Ranger`{:class="block3looks"} sprite.
+
+## Step 1
+
+Inside the `if then`{:class="block3control"} block, add an `if then else`{:class="block3control"} block: if `neil x`{:class="block3variables"} is greater than the Ranger's `x position`{:class="block3motion"}, `change x by ()`{:class="block3motion"} to move right, otherwise move left.
 
 ```blocks3
-when green flag clicked
-switch backdrop to (Town v)
-set [score v] to (0)
-set [stuff to smash v] to (0)
-set [game over v] to (0)
-+set [lives v] to (3)
+if <(game over) = (0)> then
++if <(neil x) > (x position)> then
+change x by (2)
+else
+change x by (-2)
+end
+end
 ```
+
+## Step 2
+
+Now do the same for Neil's y position, so the Ranger follows him up and down as well.
+
+```blocks3
+if <(game over) = (0)> then
+if <(neil x) > (x position)> then
+change x by (2)
+else
+change x by (-2)
+end
++if <(neil y) > (y position)> then
+change y by (2)
+else
+change y by (-2)
+end
+end
+```
+
+## Now run your code
+
+Click the green flag. The Ranger now chases Neil wherever he waddles.
