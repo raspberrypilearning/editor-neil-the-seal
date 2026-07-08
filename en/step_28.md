@@ -1,6 +1,10 @@
 ## Make it your own
 
-You've finished the game — now make it your own! Here are some ideas to take Neil the Seal further. You don't have to try them all; pick the ones that sound the most fun.
+You've finished the game — now make it your own!
+
+Here are some ideas to take Neil the Seal further.
+
+You don't have to try them all; pick the ones that sound the most fun.
 
 - Can you add more levels, each with different things for Neil to smash?
 - Can you turn the Ranger into clones, so more than one Ranger chases Neil at once?

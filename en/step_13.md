@@ -34,4 +34,6 @@ end
 
 ## Now run your code
 
-Click the green flag and smash everything. When the last object is gone, your `Win` backdrop appears and Neil stops moving.
+Click the green flag and smash everything.
+
+When the last object is gone, your `Win` backdrop appears and Neil stops moving.

@@ -32,4 +32,6 @@ end
 
 ## Now run your code
 
-Click the green flag and press the up arrow. Neil moves up the screen.
+Click the green flag and press the up arrow.
+
+Neil moves up the screen.

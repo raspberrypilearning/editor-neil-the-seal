@@ -8,7 +8,9 @@ Click on the `Ranger`{:class="block3looks"} sprite.
 
 ## Step 1
 
-At the bottom of the `if then`{:class="block3control"} block, below the movement code, add an `if then`{:class="block3control"} block that checks if the Ranger is `touching Neil`{:class="block3sensing"}. If so, `change lives by ()`{:class="block3variables"} by `-1` and send the Ranger back to the start.
+At the bottom of the `if then`{:class="block3control"} block, below the movement code, add an `if then`{:class="block3control"} block that checks if the Ranger is `touching Neil`{:class="block3sensing"}.
+
+If so, `change lives by ()`{:class="block3variables"} by `-1` and send the Ranger back to the start.
 
 ```blocks3
 if <(neil y) > (y position)> then

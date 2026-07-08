@@ -41,4 +41,6 @@ end
 
 ## Now run your code
 
-Click the green flag. The Ranger now chases Neil wherever he waddles.
+Click the green flag.
+
+The Ranger now chases Neil wherever he waddles.

@@ -6,7 +6,9 @@ Click on the `Sign`{:class="block3looks"} sprite.
 
 ## Step 1
 
-Inside the `repeat ()`{:class="block3control"} loop, add a `change stuff to smash by ()`{:class="block3variables"} block to count each clone. Then add a `wait () seconds`{:class="block3control"} block for `0.1` seconds at the very top of the script.
+Inside the `repeat ()`{:class="block3control"} loop, add a `change stuff to smash by ()`{:class="block3variables"} block to count each clone.
+
+Then add a `wait () seconds`{:class="block3control"} block for `0.1` seconds at the very top of the script.
 
 ```blocks3
 when green flag clicked
@@ -22,7 +24,9 @@ hide
 
 ## Tip
 
-Both this script and the Stage's setup script start when the green flag is clicked, so they run at the same time. Without the short wait, the signs could start counting before the Stage sets `stuff to smash` back to `0`, and the total would come out wrong.
+Both this script and the Stage's setup script start when the green flag is clicked, so they run at the same time.
+
+Without the short wait, the signs could start counting before the Stage sets `stuff to smash` back to `0`, and the total would come out wrong.
 
 ## Step 2
 
@@ -41,4 +45,6 @@ end
 
 ## Now run your code
 
-Click the green flag and smash some signs. Your score goes up, and the amount of stuff left to smash goes down.
+Click the green flag and smash some signs.
+
+Your score goes up, and the amount of stuff left to smash goes down.

@@ -1,6 +1,8 @@
 ## Smash with the space bar
 
-Right now the signs vanish the moment Neil touches them. To make Neil *smash* them, the player should have to press the space bar too.
+Right now the signs vanish the moment Neil touches them.
+
+To make Neil *smash* them, the player should have to press the space bar too.
 
 ![sign sprite](images/sign-sprite.png)
 
@@ -17,4 +19,6 @@ end
 
 ## Now run your code
 
-Click the green flag. Neil now has to bump into a sign and press the space bar to smash it.
+Click the green flag.
+
+Neil now has to bump into a sign and press the space bar to smash it.
