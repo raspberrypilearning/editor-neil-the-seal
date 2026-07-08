@@ -2,11 +2,11 @@
 
 Click on the `Neil`{:class="block3looks"} sprite to add your code to it.
 
+![neil sprite](images/neil-sprite.png)
+
 ## Step 1
 
 Make Neil always start in the middle of the road, facing right.
-
-![neil sprite](images/neil-sprite.png)
 
 ```blocks3
 when green flag clicked
