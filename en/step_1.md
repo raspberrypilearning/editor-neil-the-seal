@@ -1,5 +1,7 @@
 ## Make Neil move
 
+The starter project is open beside these instructions, with all the sprites and backdrops you need.
+
 Click on the `Neil`{:class="block3looks"} sprite to add your code to it.
 
 ![neil sprite](images/neil-sprite.png)

@@ -1,6 +1,6 @@
 ## Set up the score
 
-Now reward the player for smashing things, and keep track of how much is left.
+Reward the player for smashing things, and keep track of how much is left.
 
 ![stage](images/stage-sprite.png)
 
@@ -17,3 +17,5 @@ when green flag clicked
 set [score v] to (0)
 set [stuff to smash v] to (0)
 ```
+
+You won't see the score change yet — you'll make signs score points in the next step.

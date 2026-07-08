@@ -1,6 +1,6 @@
 ## Neil reacts to being caught
 
-Now Neil needs to react when he's caught.
+Neil needs to react when he's caught.
 
 ![neil sprite](images/neil-sprite.png)
 

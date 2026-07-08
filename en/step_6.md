@@ -1,6 +1,6 @@
 ## Fill the town with signs
 
-Now give Neil something to smash.
+Give Neil something to smash.
 
 You'll use clones to scatter stop signs around the town.
 

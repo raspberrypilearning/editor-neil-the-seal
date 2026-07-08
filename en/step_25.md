@@ -1,6 +1,6 @@
 ## Customise your cars and barriers
 
-Now make the cars and barriers your own.
+Make the cars and barriers your own.
 
 You'll make these changes on both the `Car`{:class="block3looks"} and `Barrier`{:class="block3looks"} sprites.
 

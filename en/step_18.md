@@ -1,6 +1,6 @@
 ## Catch Neil
 
-Now make Neil lose a life when the Ranger catches him.
+Make Neil lose a life when the Ranger catches him.
 
 ![ranger sprite](images/ranger-sprite.png)
 
@@ -35,3 +35,5 @@ go to x: (-200) y: (140)
 +broadcast (got ya v) and wait
 end
 ```
+
+You won't see the full effect yet — Neil reacts to being caught in the next step.

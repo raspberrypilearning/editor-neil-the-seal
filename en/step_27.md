@@ -1,6 +1,6 @@
 ## Give Neil a voice
 
-Now make Neil shout one of your words each time he smashes something.
+Make Neil shout one of your words each time he smashes something.
 
 ![neil sprite](images/neil-sprite.png)
 

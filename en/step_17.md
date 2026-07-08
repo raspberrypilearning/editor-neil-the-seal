@@ -18,3 +18,5 @@ set [stuff to smash v] to (0)
 set [game over v] to (0)
 +set [lives v] to (3)
 ```
+
+You'll see `lives` set to `3`, but Neil can't lose one yet — you'll add that next.

@@ -13,3 +13,5 @@ Make a new list called `neil's words`{:class="block3variables"}, **For all sprit
 Using the list on the Stage, click the `+` to add a few things for Neil to shout — as many as you like, and anything you want!
 
 Then untick the list's checkbox to hide it from the player.
+
+Nothing changes in the game yet — you'll use your list in the next step.

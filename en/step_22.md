@@ -1,6 +1,6 @@
 ## The Ranger says goodbye
 
-Now make the Ranger respond when the game is over.
+Make the Ranger respond when the game is over.
 
 ![ranger sprite](images/ranger-sprite.png)
 
@@ -12,3 +12,5 @@ Add a `when I receive ()`{:class="block3events"} block for the `game over` messa
 when I receive (game over v)
 say [Off you go!] for (1) seconds
 ```
+
+You won't see this on its own yet — you'll test it after the next step.

@@ -25,3 +25,5 @@ end
 +set [neil x v] to (x position)
 +set [neil y v] to (y position)
 ```
+
+Nothing looks different yet — the Ranger will start using Neil's position in the next step.

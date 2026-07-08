@@ -1,6 +1,6 @@
 ## Make the Ranger chase Neil
 
-Now use Neil's position to move the Ranger towards him.
+Use Neil's position to move the Ranger towards him.
 
 ![ranger sprite](images/ranger-sprite.png)
 

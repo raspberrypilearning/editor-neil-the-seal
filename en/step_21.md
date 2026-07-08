@@ -1,14 +1,14 @@
 ## End the game
 
-Now end the game when Neil runs out of lives.
+End the game when Neil runs out of lives.
 
 ![stage](images/stage-sprite.png)
 
-Click on the `Stage`.
+You're still working on the `Stage`.
 
 ## Step 1
 
-Add a new script — much like your winning one — using a `forever`{:class="block3control"} loop and an `if then`{:class="block3control"} block.
+Add a new script, like the win check you made earlier, using a `forever`{:class="block3control"} loop and an `if then`{:class="block3control"} block.
 
 When `lives`{:class="block3variables"} is less than `1` and `game over`{:class="block3variables"} is `0`, switch to your `game over` backdrop and set `game over`{:class="block3variables"} to `1`.
 
@@ -35,3 +35,5 @@ set [game over v] to (1)
 +broadcast (game over v)
 end
 ```
+
+You won't see this working on its own yet — you'll test it once the other sprites react over the next few steps.

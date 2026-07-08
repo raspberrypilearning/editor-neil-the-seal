@@ -1,6 +1,6 @@
 ## Detect a win
 
-Now check whether the town is clear, and show the `Win` backdrop when it is.
+Check whether the town is clear, and show the `Win` backdrop when it is.
 
 ![stage](images/stage-sprite.png)
 

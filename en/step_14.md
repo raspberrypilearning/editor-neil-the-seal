@@ -1,6 +1,6 @@
 ## Add the Ranger
 
-Now add a Ranger to chase Neil around the town.
+It's time to add a Ranger to chase Neil around the town.
 
 ![ranger sprite](images/ranger-sprite.png)
 
@@ -31,3 +31,5 @@ if <(game over) = (0)> then
 end
 end
 ```
+
+The Ranger appears in the corner, but it won't move yet — you'll add its chase code over the next two steps.
