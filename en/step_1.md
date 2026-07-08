@@ -6,6 +6,8 @@ Click on the `Neil`{:class="block3looks"} sprite to add your code to it.
 
 Make Neil always start in the middle of the road, facing right.
 
+![neil sprite](images/neil.png)
+
 ```blocks3
 when green flag clicked
 go to x: (0) y: (-40)
