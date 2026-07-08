@@ -1,14 +1,36 @@
-title: Project title in sentence case
+title: Neil the Seal
 hero_image: images/banner.png
-description: A short description of the project
+description: Code a game where you help Neil the seal waddle around town.
 listed: false
 pdf: false
 steps:
-  - title: What you will make
-  - title: Step title
+  - title: Make Neil move
     completion:
-      - engaged      
-  - title: Challenge
+      - engaged
+  - title: Move Neil in every direction
+  - title: Make Neil face the right way
+  - title: Make Neil waddle
+  - title: Add more costumes
+  - title: Fill the town with signs
+  - title: Make the signs disappear
+  - title: Smash with the space bar
+  - title: Keep score
+  - title: Make a Win screen
+  - title: Detect a win
+  - title: Stop Neil when the game ends
+  - title: Add the Ranger
+  - title: Track where Neil is
+  - title: Make the Ranger chase Neil
+  - title: Give Neil lives
+  - title: Catch Neil
+  - title: Make a game over screen
+  - title: End the game
+  - title: React to the end of the game
+  - title: Add cars and barriers
+  - title: Give Neil a voice
+    completion:
+      - internal
+  - title: Make it your own
     challenge: true
     completion:
       - external
