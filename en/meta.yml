@@ -5,9 +5,9 @@ listed: false
 pdf: false
 steps:
   - title: Make Neil move
+  - title: Move Neil in every direction
     completion:
       - engaged
-  - title: Move Neil in every direction
   - title: Make Neil face the right way
   - title: Make Neil waddle
   - title: Add more costumes
