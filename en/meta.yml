@@ -3,6 +3,7 @@ hero_image: images/banner.png
 description: Code a game where you help Neil the seal waddle around town.
 listed: false
 pdf: false
+landing: true
 steps:
   - title: Make Neil move
   - title: Move Neil in every direction
