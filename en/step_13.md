@@ -1,39 +1,64 @@
-## Stop Neil when the game ends
+## Catch Neil
 
-When the game is over, Neil should stop moving.
+## Step 1
 
-![neil sprite](images/neil-sprite.png)
+Make a variable called `lives`{:class="block3variables"}, **For all sprites**, and tick its checkbox.
 
-Click on the `Neil`{:class="block3looks"} sprite and wrap all of his movement code in an `if then`{:class="block3control"} block that only runs while `game over`{:class="block3variables"} is `0`.
+Add `set lives to (3)`{:class="block3variables"} to the Stage's green flag script.
+
+![Stage](images/stage-sprite.png)
+
+```blocks3
+when green flag clicked
+switch backdrop to (Town v)
+set [score v] to (0)
+set [stuff to smash v] to (0)
+set [game over v] to (0)
++set [lives v] to (3)
+```
+
+## Step 2
+
+In **Ranger**'s chase script, below the movement blocks and inside `if game over = 0 then`{:class="block3control"}, check `touching Neil`{:class="block3sensing"}. Add `change lives by (-1)`{:class="block3variables"} and `go to x: (-200) y: (140)`{:class="block3motion"}.
+
+![Ranger](images/ranger-sprite.png)
 
 ```blocks3
 when green flag clicked
 forever
-+if <(game over) = (0)> then
-if <key (up arrow v) pressed?> then
-change y by (5)
-next costume
+if <(game over) = (0)> then
+if <(neil x) > (x position)> then
+change x by (2)
+else
+change x by (-2)
 end
-if <key (down arrow v) pressed?> then
-change y by (-5)
-next costume
+if <(neil y) > (y position)> then
+change y by (2)
+else
+change y by (-2)
 end
-if <key (left arrow v) pressed?> then
-change x by (-5)
-point in direction (-90)
-next costume
-end
-if <key (right arrow v) pressed?> then
-change x by (5)
-point in direction (90)
-next costume
++if <touching (Neil v)?> then
+change [lives v] by (-1)
+go to x: (-200) y: (140)
 end
 end
 end
 ```
 
+## Step 3
+
+Create a message called `got ya`{:class="block3events"}. Add `broadcast (got ya) and wait`{:class="block3events"} after **Ranger** returns to the corner.
+
+![Ranger](images/ranger-sprite.png)
+
+```blocks3
+if <touching (Neil v)?> then
+change [lives v] by (-1)
+go to x: (-200) y: (140)
++broadcast (got ya v) and wait
+end
+```
+
 ## Now run your code
 
-Click the green flag and smash everything.
-
-When the last object is gone, your `Win` backdrop appears and Neil stops moving.
+Click the green flag and let **Ranger** catch **Neil**. The lives counter drops by `1`{:class="block3variables"} and **Ranger** returns to the corner.

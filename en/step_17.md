@@ -1,22 +1,31 @@
-## Give Neil lives
+## Tidy up the signs
 
-Neil needs some lives to lose when the Ranger catches him.
+When the game ends, all the stop sign clones are still lying around town.
 
-![stage](images/stage-sprite.png)
+Get them to tidy themselves up.
 
-Click on the `Stage`.
+In the clone's `forever`{:class="block3control"} loop, add an `if then`{:class="block3control"} block that checks whether `game over`{:class="block3variables"} equals `1`{:class="block3operators"}.
 
-Make a new variable called `lives`{:class="block3variables"}, **For all sprites**, and tick its checkbox so the player can see it.
+If it is, `delete this clone`{:class="block3control"}.
 
-Add it to your setup script and set `lives`{:class="block3variables"} to `3` at the start.
+![Sign](images/sign-sprite.png)
 
 ```blocks3
-when green flag clicked
-switch backdrop to (Town v)
-set [score v] to (0)
-set [stuff to smash v] to (0)
-set [game over v] to (0)
-+set [lives v] to (3)
+when I start as a clone
+forever
+if <<touching (Neil v)?> and <key (space v) pressed?>> then
+change [score v] by (10)
+change [stuff to smash v] by (-1)
+delete this clone
+end
++if <(game over) = (1)> then
+delete this clone
+end
+end
 ```
 
-You'll see `lives` set to `3`, but Neil can't lose one yet — you'll add that next.
+## Now run your code
+
+Click the green flag and let the **Ranger** catch **Neil** three times.
+
+The `game over`{:class="block3looks"} backdrop appears, **Ranger** says “Off you go!”, and the leftover signs disappear.

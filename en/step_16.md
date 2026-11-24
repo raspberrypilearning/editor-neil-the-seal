@@ -1,46 +1,14 @@
-## Make the Ranger chase Neil
+## The Ranger says goodbye
 
-Use Neil's position to move the Ranger towards him.
+Add `when I receive (game over)`{:class="block3events"} and `say () for () seconds`{:class="block3looks"} to make **Ranger** say “Off you go!”.
 
-![ranger sprite](images/ranger-sprite.png)
-
-Click on the `Ranger`{:class="block3looks"} sprite.
-
-## Step 1
-
-Inside the `if then`{:class="block3control"} block, add an `if then else`{:class="block3control"} block: if `neil x`{:class="block3variables"} is greater than the Ranger's `x position`{:class="block3motion"}, `change x by ()`{:class="block3motion"} to move right, otherwise move left.
+![Ranger](images/ranger-sprite.png)
 
 ```blocks3
-if <(game over) = (0)> then
-+if <(neil x) > (x position)> then
-change x by (2)
-else
-change x by (-2)
-end
-end
-```
-
-## Step 2
-
-Now do the same for Neil's y position, so the Ranger follows him up and down as well.
-
-```blocks3
-if <(game over) = (0)> then
-if <(neil x) > (x position)> then
-change x by (2)
-else
-change x by (-2)
-end
-+if <(neil y) > (y position)> then
-change y by (2)
-else
-change y by (-2)
-end
-end
+when I receive (game over v)
+say [Off you go!] for (1) seconds
 ```
 
 ## Now run your code
 
-Click the green flag.
-
-The Ranger now chases Neil wherever he waddles.
+Click the green flag and lose all three lives. **Ranger** says “Off you go!” when the game ends.

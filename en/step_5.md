@@ -1,22 +1,20 @@
 ## Add more costumes
 
-Two costumes give Neil a simple wobble.
-
-Adding a few more makes his movement much smoother.
+Add more costumes to make **Neil**'s movement smoother.
 
 ![neil sprite](images/neil-sprite.png)
 
-Duplicate one of your costumes to make `seal3`, then move the legs again for a new pose.
+Open the **Costumes** tab. Duplicate one of your costumes to make `seal3`{:class="block3looks"}, then move the legs again for a new pose.
 
-Keep going until Neil has five costumes, each with the legs in a slightly different position.
+Keep going until **Neil** has five costumes, each with the legs in a slightly different position.
 
 ![Neil's five costumes side by side, with the legs in slightly different positions in each one](images/neil-costumes-all.png)
 
 ## Now run your code
 
-Click the green flag and move Neil around.
+Click the green flag and move **Neil** around.
 
-The `next costume`{:class="block3looks"} block cycles through all five poses, giving Neil a smooth waddle.
+The `next costume`{:class="block3looks"} block cycles through all five poses, giving **Neil** a smooth waddle.
 
 --- no-print ---
 

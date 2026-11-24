@@ -1,23 +1,33 @@
-## Neil reacts to being caught
+## Customise your cars and barriers
 
-Neil needs to react when he's caught.
+Make the cars and barriers your own.
 
-![neil sprite](images/neil-sprite.png)
+You'll make these changes on both the **Car** and **Barrier** sprites.
 
-Click on the `Neil`{:class="block3looks"} sprite.
+## Step 1
 
-Add a `when I receive ()`{:class="block3events"} block for the `got ya` message.
+![Car](images/car-sprite.png)
 
-Send Neil back to his starting position, then make him `say () for () seconds`{:class="block3looks"} to say "Hey!".
+In **Car**'s `repeat ()`{:class="block3control"} loop, change the number to decide how many cars appear.
 
-```blocks3
-when I receive (got ya v)
-go to x: (0) y: (-40)
-say [Hey!] for (0.6) seconds
-```
+![Barrier](images/barrier-sprite.png)
+
+Then do the same on the **Barrier** sprite.
+
+## Step 2
+
+On both **Car** and **Barrier**, decide how many points each one is worth by changing the number in the `change score by ()`{:class="block3variables"} block.
+
+Maybe some things are trickier to reach and should be worth more?
+
+## Step 3
+
+Choose where each type of object appears.
+
+In the `go to x: () y: ()`{:class="block3motion"} block, change the `pick random () to ()`{:class="block3operators"} numbers to set the area they spawn in — for example, keeping the cars low down so they stay on the road.
 
 ## Now run your code
 
-Click the green flag and let the Ranger catch Neil.
+Click the green flag.
 
-Neil says "Hey!", pops back to the start, and loses a life.
+The town is now full of signs, cars, and barriers to smash — each worth the points you chose, in the places you picked.

@@ -1,39 +1,15 @@
-## End the game
+## Make it your own
 
-End the game when Neil runs out of lives.
+Choose an idea to make the game your own.
 
-![stage](images/stage-sprite.png)
+- Can you add more levels, each with different things for **Neil** to smash?
+- Can you turn the **Ranger** into clones, so more than one **Ranger** chases **Neil** at once?
+- Can you give each level its own backdrop, so the town changes as **Neil** plays?
+- Can you change how fast **Neil** or **Ranger** moves, to make the game easier or harder?
+- Can you add a patch of sea where **Neil** can hide, so the **Ranger** can't reach him?
 
-You're still working on the `Stage`.
+## Now run your code
 
-## Step 1
+Try one of your ideas, then click the green flag and test what changed. Check that you can still win, lose lives, and restart.
 
-Add a new script, like the win check you made earlier, using a `forever`{:class="block3control"} loop and an `if then`{:class="block3control"} block.
-
-When `lives`{:class="block3variables"} is less than `1` and `game over`{:class="block3variables"} is `0`, switch to your `game over` backdrop and set `game over`{:class="block3variables"} to `1`.
-
-```blocks3
-when green flag clicked
-forever
-if <<(lives) < (1)> and <(game over) = (0)>> then
-switch backdrop to (game over v)
-set [game over v] to (1)
-end
-end
-```
-
-## Step 2
-
-Make a new message called `game over`.
-
-Add a `broadcast ()`{:class="block3events"} block to the script, so the other sprites know the game has ended.
-
-```blocks3
-if <<(lives) < (1)> and <(game over) = (0)>> then
-switch backdrop to (game over v)
-set [game over v] to (1)
-+broadcast (game over v)
-end
-```
-
-You won't see this working on its own yet — you'll test it once the other sprites react over the next few steps.
+Remember to save your project.

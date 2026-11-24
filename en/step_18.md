@@ -1,39 +1,23 @@
-## Catch Neil
+## Copy the code to cars and barriers
 
-Make Neil lose a life when the Ranger catches him.
+Add cars and barriers for **Neil** to smash too.
 
-![ranger sprite](images/ranger-sprite.png)
+Copy the stop sign code to reuse it.
 
-Click on the `Ranger`{:class="block3looks"} sprite.
+![Sign](images/sign-sprite.png)
 
-## Step 1
+Drag each of **Sign**'s two scripts onto the **Car** sprite in the sprite list, then onto the **Barrier** sprite, to copy the code across.
 
-At the bottom of the `if then`{:class="block3control"} block, below the movement code, add an `if then`{:class="block3control"} block that checks if the Ranger is `touching Neil`{:class="block3sensing"}.
+The copied `create clone of (myself)`{:class="block3control"} and `touching Neil`{:class="block3sensing"} blocks work for both sprites.
 
-If so, `change lives by ()`{:class="block3variables"} by `-1` and send the Ranger back to the start.
+--- no-print ---
 
-```blocks3
-if <(neil y) > (y position)> then
-change y by (2)
-else
-change y by (-2)
-end
-+if <touching (Neil v)?> then
-change [lives v] by (-1)
-go to x: (-200) y: (140)
-end
-```
+![Animated image showing a script being dragged onto another sprite in the sprite list to copy it](images/copy-script.gif)
 
-## Step 2
+--- /no-print ---
 
-Make a new message called `got ya`, and add a `broadcast () and wait`{:class="block3events"} block inside that `if then`{:class="block3control"} block to tell the rest of the game Neil has been caught.
+## Now run your code
 
-```blocks3
-if <touching (Neil v)?> then
-change [lives v] by (-1)
-go to x: (-200) y: (140)
-+broadcast (got ya v) and wait
-end
-```
+Click the green flag.
 
-You won't see the full effect yet — Neil reacts to being caught in the next step.
+The town now has cars and barriers to smash as well as signs.

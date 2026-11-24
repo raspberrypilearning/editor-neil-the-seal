@@ -1,14 +1,12 @@
 ## Make Neil move
 
-The starter project is open beside these instructions, with all the sprites and backdrops you need.
-
-Click on the `Neil`{:class="block3looks"} sprite to add your code to it.
-
-![neil sprite](images/neil-sprite.png)
+The starter project is open beside these instructions, with the sprites and `Town`{:class="block3looks"} backdrop ready.
 
 ## Step 1
 
-Make Neil always start in the middle of the road, facing right.
+Add `when green flag clicked`{:class="block3events"}, `go to x: () y: ()`{:class="block3motion"}, `point in direction ()`{:class="block3motion"}, and `show`{:class="block3looks"} to start **Neil** in the middle of the road, facing right.
+
+![Neil](images/neil-sprite.png)
 
 ```blocks3
 when green flag clicked
@@ -21,7 +19,9 @@ show
 
 Add another `when green flag clicked`{:class="block3events"} block with a `forever`{:class="block3control"} loop.
 
-Inside it, use an `if then`{:class="block3control"} block to move Neil up when the `up arrow`{:class="block3sensing"} key is pressed.
+Inside it, use an `if then`{:class="block3control"} block to move **Neil** up when the `up arrow`{:class="block3sensing"} key is pressed.
+
+![Neil](images/neil-sprite.png)
 
 ```blocks3
 when green flag clicked
@@ -36,4 +36,4 @@ end
 
 Click the green flag and press the up arrow.
 
-Neil moves up the screen.
+**Neil** moves up the screen.

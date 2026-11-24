@@ -1,28 +1,28 @@
 ## Make Neil waddle
 
-Right now Neil slides around without moving.
-
-Give him a second costume so he looks like he's walking.
-
-![neil sprite](images/neil-sprite.png)
+Give **Neil** a second costume so he looks like he's walking.
 
 ## Step 1
 
-Click the `Costumes`{:class="block3looks"} tab.
+![Neil](images/neil-sprite.png)
 
-Neil has one costume, called `seal1`.
+Open the **Costumes** tab.
 
-Right-click `seal1` and choose **duplicate** to make `seal2`.
+**Neil** has one costume, called `seal1`{:class="block3looks"}.
 
-In the paint editor, move each of Neil's legs a little, so `seal2` is in a different pose to `seal1`.
+Right-click `seal1`{:class="block3looks"} and choose **duplicate** to make `seal2`{:class="block3looks"}.
+
+In the paint editor, move each of **Neil**'s legs a little, so `seal2`{:class="block3looks"} is in a different pose to `seal1`{:class="block3looks"}.
 
 ![Neil's seal1 and seal2 costumes side by side, with the legs in different positions](images/neil-costumes-first.png)
 
 ## Step 2
 
-Go back to the `Code`{:class="block3control"} tab.
+Go back to the **Code** tab.
 
-Add a `next costume`{:class="block3looks"} block inside each of your four arrow-key `if then`{:class="block3control"} blocks, so Neil changes costume whenever he moves.
+Add a `next costume`{:class="block3looks"} block inside each of your four arrow-key `if then`{:class="block3control"} blocks, so **Neil** changes costume whenever he moves.
+
+![Neil](images/neil-sprite.png)
 
 ```blocks3
 if <key (up arrow v) pressed?> then
@@ -33,6 +33,6 @@ end
 
 ## Now run your code
 
-Click the green flag and move Neil around.
+Click the green flag and move **Neil** around.
 
 His two costumes swap back and forth, so he looks like he's waddling.

@@ -1,12 +1,12 @@
 ## Smash with the space bar
 
-Right now the signs vanish the moment Neil touches them.
+Right now the signs vanish the moment **Neil** touches them.
 
-To make Neil *smash* them, the player should have to press the space bar too.
-
-![sign sprite](images/sign-sprite.png)
+To make **Neil** *smash* them, the player should have to press the space bar too.
 
 Change the `if then`{:class="block3control"} condition so it also checks whether the `space`{:class="block3sensing"} key is pressed, using an `and`{:class="block3operators"} block to join the two checks.
+
+![Sign](images/sign-sprite.png)
 
 ```blocks3
 when I start as a clone
@@ -21,4 +21,4 @@ end
 
 Click the green flag.
 
-Neil now has to bump into a sign and press the space bar to smash it.
+**Neil** now has to bump into a sign and press the space bar to smash it.

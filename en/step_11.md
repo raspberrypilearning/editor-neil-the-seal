@@ -1,15 +1,39 @@
-## Make a Win screen
+## Stop Neil when the game ends
 
-The player wins by smashing everything in town.
+When the game is over, **Neil** should stop moving.
 
-![stage](images/stage-sprite.png)
+Wrap all of his movement code in an `if then`{:class="block3control"} block that only runs while `game over`{:class="block3variables"} equals `0`{:class="block3operators"}.
 
-Click on the `Stage`, then the `Backdrops`{:class="block3looks"} tab.
+![Neil](images/neil-sprite.png)
 
-Hover over **Choose a Backdrop** and click **Paint** to make a new, blank backdrop.
+```blocks3
+when green flag clicked
+forever
++if <(game over) = (0)> then
+if <key (up arrow v) pressed?> then
+change y by (5)
+next costume
+end
+if <key (down arrow v) pressed?> then
+change y by (-5)
+next costume
+end
+if <key (left arrow v) pressed?> then
+change x by (-5)
+point in direction (-90)
+next costume
+end
+if <key (right arrow v) pressed?> then
+change x by (5)
+point in direction (90)
+next costume
+end
+end
+end
+```
 
-Call it `Win`, then give it a background and some celebratory text — write whatever you like.
+## Now run your code
 
-![The Win backdrop from the example project, a green screen reading TOWN DEMOLISHED!](images/win-backdrop.png)
+Click the green flag and smash everything.
 
-You won't see your `Win` backdrop in the game yet — you'll make it appear in the next step.
+When the last object is gone, your `Win`{:class="block3looks"} backdrop appears and **Neil** stops moving.

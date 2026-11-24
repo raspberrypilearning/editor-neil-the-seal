@@ -1,50 +1,50 @@
-## Count and score the signs
-
-Click on the `Sign`{:class="block3looks"} sprite.
-
-![sign sprite](images/sign-sprite.png)
+## Detect a win
 
 ## Step 1
 
-Inside the `repeat ()`{:class="block3control"} loop, add a `change stuff to smash by ()`{:class="block3variables"} block to count each clone.
+![Stage](images/stage-sprite.png)
 
-Then add a `wait () seconds`{:class="block3control"} block for `0.1` seconds at the very top of the script.
+Select the Stage's **Backdrops** tab. Hover over **Choose a Backdrop** and choose **Paint**.
 
-```blocks3
-when green flag clicked
-+wait (0.1) seconds
-show
-repeat (6)
-go to x: (pick random (-220) to (220)) y: (pick random (-100) to (130))
-create clone of (myself v)
-+change [stuff to smash v] by (1)
-end
-hide
-```
+Call the new backdrop `Win`{:class="block3looks"}, then add a background and some celebratory text.
 
-## Tip
-
-Both this script and the Stage's setup script start when the green flag is clicked, so they run at the same time.
-
-Without the short wait, the signs could start counting before the Stage sets `stuff to smash` back to `0`, and the total would come out wrong.
+![The example Win backdrop, a green screen reading TOWN DEMOLISHED!](images/win-backdrop.png)
 
 ## Step 2
 
-In the clone script, inside the `if then`{:class="block3control"} block, add a `change score by ()`{:class="block3variables"} block to add `10` points and a `change stuff to smash by ()`{:class="block3variables"} block to take away `1`.
+Make a variable called `game over`{:class="block3variables"}, **For all sprites**, and untick its checkbox.
+
+In the Stage's green flag script, add `switch backdrop to (Town)`{:class="block3looks"} and `set game over to (0)`{:class="block3variables"} as shown.
+
+![Stage](images/stage-sprite.png)
 
 ```blocks3
-when I start as a clone
+when green flag clicked
++switch backdrop to (Town v)
+set [score v] to (0)
+set [stuff to smash v] to (0)
++set [game over v] to (0)
+```
+
+## Step 3
+
+Add a new script with `when green flag clicked`{:class="block3events"}, `wait (0.2) seconds`{:class="block3control"}, and a `forever`{:class="block3control"} loop. The wait lets the signs be counted first.
+
+Inside the loop, check whether `stuff to smash`{:class="block3variables"} is less than `1`{:class="block3operators"} and `game over`{:class="block3variables"} equals `0`{:class="block3operators"}. If so, switch to `Win`{:class="block3looks"} and set `game over`{:class="block3variables"} to `1`{:class="block3variables"}.
+
+![Stage](images/stage-sprite.png)
+
+```blocks3
+when green flag clicked
+wait (0.2) seconds
 forever
-if <<touching (Neil v)?> and <key (space v) pressed?>> then
-+change [score v] by (10)
-+change [stuff to smash v] by (-1)
-delete this clone
+if <<(stuff to smash) < (1)> and <(game over) = (0)>> then
+switch backdrop to (Win v)
+set [game over v] to (1)
 end
 end
 ```
 
 ## Now run your code
 
-Click the green flag and smash some signs.
-
-Your score goes up, and the amount of stuff left to smash goes down.
+Click the green flag and smash all six signs. The `Win`{:class="block3looks"} backdrop appears. Click the green flag again to return to `Town`{:class="block3looks"}.

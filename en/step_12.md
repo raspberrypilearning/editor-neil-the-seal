@@ -1,46 +1,79 @@
-## Detect a win
-
-Check whether the town is clear, and show the `Win` backdrop when it is.
-
-![stage](images/stage-sprite.png)
+## Make the Ranger chase Neil
 
 ## Step 1
 
-Make a new variable called `game over`{:class="block3variables"}, **For all sprites**, and untick its checkbox to hide it.
+Make two variables, `neil x`{:class="block3variables"} and `neil y`{:class="block3variables"}, both **For all sprites**. Untick their checkboxes.
 
-On the Stage, add it to your setup script and set it to `0` at the start.
+At the bottom of **Neil**'s movement code, inside `if game over = 0 then`{:class="block3control"}, set these variables to his `x position`{:class="block3motion"} and `y position`{:class="block3motion"}.
 
-Add a `switch backdrop to ()`{:class="block3looks"} block so the game always begins on the `Town` backdrop.
+![Neil](images/neil-sprite.png)
 
 ```blocks3
 when green flag clicked
-+switch backdrop to (Town v)
-set [score v] to (0)
-set [stuff to smash v] to (0)
-+set [game over v] to (0)
+forever
+if <(game over) = (0)> then
+if <key (up arrow v) pressed?> then
+change y by (5)
+next costume
+end
+if <key (down arrow v) pressed?> then
+change y by (-5)
+next costume
+end
+if <key (left arrow v) pressed?> then
+change x by (-5)
+point in direction (-90)
+next costume
+end
+if <key (right arrow v) pressed?> then
+change x by (5)
+point in direction (90)
+next costume
+end
++set [neil x v] to (x position)
++set [neil y v] to (y position)
+end
+end
 ```
 
 ## Step 2
 
-On the Stage, add a new script to check for a win.
+Add a script to put **Ranger** in the corner at the start of each game.
 
-Start with a `wait () seconds`{:class="block3control"} block for `0.2` seconds so everything can be counted first.
-
-Then use a `forever`{:class="block3control"} loop with an `if then`{:class="block3control"} block: when `stuff to smash`{:class="block3variables"} is less than `1` and `game over`{:class="block3variables"} is `0`, switch to your `Win` backdrop and set `game over`{:class="block3variables"} to `1`.
+![Ranger](images/ranger-sprite.png)
 
 ```blocks3
 when green flag clicked
-wait (0.2) seconds
+go to x: (-200) y: (140)
+show
+```
+
+## Step 3
+
+Add another `when green flag clicked`{:class="block3events"} script with a `forever`{:class="block3control"} loop and an `if then`{:class="block3control"} block. Only chase while `game over`{:class="block3variables"} equals `0`{:class="block3operators"}.
+
+Inside it, add two `if then else`{:class="block3control"} blocks. Compare **Neil**'s position with **Ranger**'s position to move right or left, then up or down.
+
+![Ranger](images/ranger-sprite.png)
+
+```blocks3
+when green flag clicked
 forever
-if <<(stuff to smash) < (1)> and <(game over) = (0)>> then
-switch backdrop to (Win v)
-set [game over v] to (1)
+if <(game over) = (0)> then
+if <(neil x) > (x position)> then
+change x by (2)
+else
+change x by (-2)
+end
+if <(neil y) > (y position)> then
+change y by (2)
+else
+change y by (-2)
+end
 end
 end
 ```
 
 ## Now run your code
 
-Click the green flag and smash everything in town.
-
-When the last object is gone, your `Win` backdrop appears.
+Click the green flag and move **Neil** around. **Ranger** follows him across the town.

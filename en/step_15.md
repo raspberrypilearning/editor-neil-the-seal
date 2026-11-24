@@ -1,29 +1,36 @@
-## Track where Neil is
-
-For the Ranger to chase Neil, it needs to know where Neil is.
-
-![neil sprite](images/neil-sprite.png)
+## End the game
 
 ## Step 1
 
-Click on the `Neil`{:class="block3looks"} sprite and make two variables, `neil x`{:class="block3variables"} and `neil y`{:class="block3variables"}, both **For all sprites**.
+![Stage](images/stage-sprite.png)
 
-Untick both checkboxes to hide them from the player.
+Select the Stage's **Backdrops** tab. Hover over **Choose a Backdrop** and choose **Paint**.
+
+Call the new backdrop `game over`{:class="block3looks"} and design a screen for when **Neil** runs out of lives.
+
+![The example game over backdrop, a blue screen reading BACK TO SEA!](images/game-over-backdrop.png)
 
 ## Step 2
 
-Find Neil's movement script.
+Add a new script with `when green flag clicked`{:class="block3events"}, a `forever`{:class="block3control"} loop, and an `if then`{:class="block3control"} block.
 
-At the bottom of the movement code, inside the `if then`{:class="block3control"} block, set `neil x`{:class="block3variables"} and `neil y`{:class="block3variables"} to his current position.
+Check whether `lives`{:class="block3variables"} is less than `1`{:class="block3operators"} and `game over`{:class="block3variables"} equals `0`{:class="block3operators"}. If so, switch to the `game over`{:class="block3looks"} backdrop and set `game over`{:class="block3variables"} to `1`{:class="block3variables"}.
+
+Create a message also called `game over`{:class="block3events"} and broadcast it at the end of the `if then`{:class="block3control"} block.
+
+![Stage](images/stage-sprite.png)
 
 ```blocks3
-if <key (right arrow v) pressed?> then
-change x by (5)
-point in direction (90)
-next costume
+when green flag clicked
+forever
+if <<(lives) < (1)> and <(game over) = (0)>> then
+switch backdrop to (game over v)
+set [game over v] to (1)
+broadcast (game over v)
 end
-+set [neil x v] to (x position)
-+set [neil y v] to (y position)
+end
 ```
 
-Nothing looks different yet — the Ranger will start using Neil's position in the next step.
+## Now run your code
+
+Click the green flag and let **Ranger** catch **Neil** three times. The `game over`{:class="block3looks"} backdrop appears and both sprites stop moving. Restart to reset your lives.
