@@ -1,45 +1,39 @@
-## What you will make
-OR
-## What you will do - change meta if you use this
+## Make Neil move
 
-A brief description - one or two sentences. 
+The starter project is open beside these instructions, with the sprites and `Town`{:class="block3looks"} backdrop ready.
 
---- print-only ---
+## Step 1
 
-![ALT TEXT](images/IMAGE.png)
+Add `when green flag clicked`{:class="block3events"}, `go to x: () y: ()`{:class="block3motion"}, `point in direction ()`{:class="block3motion"}, and `show`{:class="block3looks"} to start **Neil** in the middle of the road, facing right.
 
---- /print-only ---
+![Neil](images/neil-sprite.png)
 
---- no-print ---
+```blocks3
+when green flag clicked
+go to x: (0) y: (-40)
+point in direction (90)
+show
+```
 
-[Editor embed](https://editor.raspberrypi.org/en/embed/viewer/project-slug)
+## Step 2
 
---- /no-print ---
+Add another `when green flag clicked`{:class="block3events"} block with a `forever`{:class="block3control"} loop.
 
---- no-print ---
+Inside it, use an `if then`{:class="block3control"} block to move **Neil** up when the `up arrow`{:class="block3sensing"} key is pressed.
 
-Video embed
+![Neil](images/neil-sprite.png)
 
-<video width="640" height="360" controls>
-<source src="images/videoname.mp4" type="video/mp4">
-</video>
+```blocks3
+when green flag clicked
+forever
+if <key (up arrow v) pressed?> then
+change y by (5)
+end
+end
+```
 
-Youtube embed 
-<html>
-<div style="position: relative; overflow: hidden; padding-top: 56.25%;">
-<iframe style="position: absolute; top: 0; left: 0; right: 0; width: 100%; height: 100%; border: none;" src="https://www.youtube.com/embed/XXXXXXXXX?rel=0&cc_load_policy=1" allowfullscreen allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share">
-</iframe>
-</div><br>
-</html>
+## Now run your code
 
-Scratch embed
-<div class="scratch-preview">
- <iframe allowtransparency="true" width="485" height="402" src="https://scratch.mit.edu/projects/embed/XXXXXXXXX/?autostart=false" frameborder="0"></iframe>
-</div>
+Click the green flag and press the up arrow.
 
---- /no-print ---
-
-### You will need:
-- a
-- b
-- c
+**Neil** moves up the screen.

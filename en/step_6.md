@@ -1,0 +1,42 @@
+## Fill the town with signs
+
+Give **Neil** something to smash.
+
+You'll use clones to scatter stop signs around the town.
+
+## Step 1
+
+Add a `when green flag clicked`{:class="block3events"} block and a `show`{:class="block3looks"} block, then use a `repeat ()`{:class="block3control"} loop to move to six random spots, making a clone at each one.
+
+![Sign](images/sign-sprite.png)
+
+```blocks3
+when green flag clicked
+show
+repeat (6)
+go to x: (pick random (-220) to (220)) y: (pick random (-100) to (130))
+create clone of (myself v)
+end
+```
+
+## Step 2
+
+The original sign is still on show.
+
+Add a `hide`{:class="block3looks"} block to the end of the script, so only the six clones are left visible.
+
+![Sign](images/sign-sprite.png)
+
+```blocks3
+repeat (6)
+go to x: (pick random (-220) to (220)) y: (pick random (-100) to (130))
+create clone of (myself v)
+end
++hide
+```
+
+## Now run your code
+
+Click the green flag.
+
+Six stop signs appear around the town.
